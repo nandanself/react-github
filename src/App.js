@@ -7,7 +7,7 @@ const App = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path='/' component={Search}/>
-      <Route path='/profile' component={Profile}/>
+      <Route path='/:username' component={Profile}/>
     </Switch>
   </BrowserRouter>
 );

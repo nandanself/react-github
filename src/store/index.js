@@ -1,11 +1,13 @@
 import { createStore, applyMiddleware } from 'redux'
-import userReducer from '../reducers/userReducers'
+import ProfileReducer from '../reducers/profile'
+import SearchReducer from '../reducers/search'
 import { combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
 const reducers = combineReducers(
   {
-    userReducer,
+    SearchReducer,  
+    ProfileReducer
   }  
 );
 export default createStore(reducers, {}, applyMiddleware(thunk));
